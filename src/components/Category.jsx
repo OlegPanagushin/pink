@@ -38,7 +38,7 @@ const styles = {
   categoryDynamic: props => ({
     background: props.color,
     transition: props.theme.transitions.create(
-      ["transform", "width", "height", "z-index"],
+      ["transform", "width", "height", "z-index", "border-radius"],
       {
         duration: 1000
       }
@@ -48,15 +48,11 @@ const styles = {
     transform: `scale(1) ${getTranslate(props.id)}`
   }),
   flip: {
+    borderRadius: "0",
+    transform: "scale(1) translate(0px, 0px)",
     zIndex: 1000,
-    "@media screen and (orientation: landscape)": {
-      height: "200vw",
-      width: "200vw"
-    },
-    "@media screen and (orientation: portrait)": {
-      height: "200vh",
-      width: "200vh"
-    }
+    height: "100%",
+    width: "100%"
   }
 };
 
@@ -77,13 +73,14 @@ class Category extends React.Component {
 
   render() {
     const { classes } = this.props;
+    const { show, open } = this.state;
     return (
       <div
         className={cn(
           classes.category,
           classes.categoryDynamic,
-          this.state.show && classes.show,
-          this.state.open && classes.flip
+          show && !open && classes.show,
+          open && classes.flip
         )}
         onClick={this.handleClick}
       />

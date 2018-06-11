@@ -1,0 +1,30 @@
+{
+  "name": "ppink",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^1.2.0",
+    "@material-ui/icons": "^1.1.0",
+    "classnames": "^2.2.5",
+    "prop-types": "^15.6.1",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-jss": "^8.5.0",
+    "react-redux": "^5.0.7",
+    "react-scripts": "1.1.4",
+    "react-transition-group": "^2.3.1",
+    "redux": "^4.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-react": "^7.9.1"
+  }
+}
